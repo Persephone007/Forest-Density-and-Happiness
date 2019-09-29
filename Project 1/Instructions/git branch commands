@@ -1,0 +1,288 @@
+medot@LAPTOP-G6CG6M7A MINGW64 ~/Desktop/data-somerset-0806
+$ git clone https://github.com/amaddatu/project.git
+Cloning into 'project'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+
+medot@LAPTOP-G6CG6M7A MINGW64 ~/Desktop/data-somerset-0806
+$ cd project
+
+medot@LAPTOP-G6CG6M7A MINGW64 ~/Desktop/data-somerset-0806/project (master)
+$ git log
+commit a9210b10c27c0fbbf763e1974267b45dfd0fc58b (HEAD -> master, origin/master, origin/HEAD)
+Author: amaddatu <amaddatu@gmail.com>
+Date:   Tue Sep 24 18:44:35 2019 -0400
+
+    Initial commit
+
+medot@LAPTOP-G6CG6M7A MINGW64 ~/Desktop/data-somerset-0806/project (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .gitignore
+        config.py
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+medot@LAPTOP-G6CG6M7A MINGW64 ~/Desktop/data-somerset-0806/project (master)
+$ git add .
+
+medot@LAPTOP-G6CG6M7A MINGW64 ~/Desktop/data-somerset-0806/project (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   .gitignore
+        new file:   config.py
+
+
+medot@LAPTOP-G6CG6M7A MINGW64 ~/Desktop/data-somerset-0806/project (master)
+$ git reset
+
+medot@LAPTOP-G6CG6M7A MINGW64 ~/Desktop/data-somerset-0806/project (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .gitignore
+        config.py
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+medot@LAPTOP-G6CG6M7A MINGW64 ~/Desktop/data-somerset-0806/project (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        .gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+medot@LAPTOP-G6CG6M7A MINGW64 ~/Desktop/data-somerset-0806/project (master)
+$ git add .
+
+medot@LAPTOP-G6CG6M7A MINGW64 ~/Desktop/data-somerset-0806/project (master)
+$ git commit -m "Ignore api keys"
+[master 106c85c] Ignore api keys
+ 1 file changed, 1 insertion(+)
+ create mode 100644 .gitignore
+
+medot@LAPTOP-G6CG6M7A MINGW64 ~/Desktop/data-somerset-0806/project (master)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 292 bytes | 292.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/amaddatu/project.git
+   a9210b1..106c85c  master -> master
+
+medot@LAPTOP-G6CG6M7A MINGW64 ~/Desktop/data-somerset-0806/project (master)
+$ git log
+commit 106c85cb6ec2ea48e3c936713017ba053f0c5c69 (HEAD -> master, origin/master, origin/HEAD)
+Author: Anthony Maddatu <amaddatu@gmail.com>
+Date:   Tue Sep 24 18:49:03 2019 -0400
+
+    Ignore api keys
+
+commit a9210b10c27c0fbbf763e1974267b45dfd0fc58b
+Author: amaddatu <amaddatu@gmail.com>
+Date:   Tue Sep 24 18:44:35 2019 -0400
+
+    Initial commit
+
+medot@LAPTOP-G6CG6M7A MINGW64 ~/Desktop/data-somerset-0806/project (master)
+$ git checkout a9210b10c27c0fbbf763e1974267b45dfd0fc58b
+Note: checking out 'a9210b10c27c0fbbf763e1974267b45dfd0fc58b'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at a9210b1 Initial commit
+
+medot@LAPTOP-G6CG6M7A MINGW64 ~/Desktop/data-somerset-0806/project ((a9210b1...))
+$ git log
+commit a9210b10c27c0fbbf763e1974267b45dfd0fc58b (HEAD)
+Author: amaddatu <amaddatu@gmail.com>
+Date:   Tue Sep 24 18:44:35 2019 -0400
+
+    Initial commit
+
+medot@LAPTOP-G6CG6M7A MINGW64 ~/Desktop/data-somerset-0806/project ((a9210b1...))
+$ git checkout HEAD
+
+medot@LAPTOP-G6CG6M7A MINGW64 ~/Desktop/data-somerset-0806/project ((a9210b1...))
+$ git checkout master
+Previous HEAD position was a9210b1 Initial commit
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+medot@LAPTOP-G6CG6M7A MINGW64 ~/Desktop/data-somerset-0806/project (master)
+$ git checkout -b elie
+Switched to a new branch 'elie'
+
+medot@LAPTOP-G6CG6M7A MINGW64 ~/Desktop/data-somerset-0806/project (elie)
+$ git branch -v
+* elie   106c85c Ignore api keys
+  master 106c85c Ignore api keys
+
+medot@LAPTOP-G6CG6M7A MINGW64 ~/Desktop/data-somerset-0806/project (elie)
+$ git checkout -b daewon
+Switched to a new branch 'daewon'
+
+medot@LAPTOP-G6CG6M7A MINGW64 ~/Desktop/data-somerset-0806/project (daewon)
+$ git branch -v
+* daewon 106c85c Ignore api keys
+  elie   106c85c Ignore api keys
+  master 106c85c Ignore api keys
+
+medot@LAPTOP-G6CG6M7A MINGW64 ~/Desktop/data-somerset-0806/project (daewon)
+$ git status
+On branch daewon
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+medot@LAPTOP-G6CG6M7A MINGW64 ~/Desktop/data-somerset-0806/project (daewon)
+$ git add .
+
+medot@LAPTOP-G6CG6M7A MINGW64 ~/Desktop/data-somerset-0806/project (daewon)
+$ git commit -m "Change the readme to talk about how fun this class is"
+[daewon 0ec9829] Change the readme to talk about how fun this class is
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+medot@LAPTOP-G6CG6M7A MINGW64 ~/Desktop/data-somerset-0806/project (daewon)
+$ git branch -v
+* daewon 0ec9829 Change the readme to talk about how fun this class is
+  elie   106c85c Ignore api keys
+  master 106c85c Ignore api keys
+
+medot@LAPTOP-G6CG6M7A MINGW64 ~/Desktop/data-somerset-0806/project (daewon)
+$ git checkout elie
+Switched to branch 'elie'
+
+medot@LAPTOP-G6CG6M7A MINGW64 ~/Desktop/data-somerset-0806/project (elie)
+$ git merge daewon
+Updating 106c85c..0ec9829
+Fast-forward
+ README.md | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+medot@LAPTOP-G6CG6M7A MINGW64 ~/Desktop/data-somerset-0806/project (elie)
+$ git branch -v
+  daewon 0ec9829 Change the readme to talk about how fun this class is
+* elie   0ec9829 Change the readme to talk about how fun this class is
+  master 106c85c Ignore api keys
+
+medot@LAPTOP-G6CG6M7A MINGW64 ~/Desktop/data-somerset-0806/project (elie)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+medot@LAPTOP-G6CG6M7A MINGW64 ~/Desktop/data-somerset-0806/project (master)
+$ git merge elie
+Updating 106c85c..0ec9829
+Fast-forward
+ README.md | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+medot@LAPTOP-G6CG6M7A MINGW64 ~/Desktop/data-somerset-0806/project (master)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 336 bytes | 84.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/amaddatu/project.git
+   106c85c..0ec9829  master -> master
+
+medot@LAPTOP-G6CG6M7A MINGW64 ~/Desktop/data-somerset-0806/project (master)
+$ git checkout elie
+Switched to branch 'elie'
+M       README.md
+
+medot@LAPTOP-G6CG6M7A MINGW64 ~/Desktop/data-somerset-0806/project (elie)
+$ git add .
+
+medot@LAPTOP-G6CG6M7A MINGW64 ~/Desktop/data-somerset-0806/project (elie)
+$ git commit -m "Add relevant commands"
+[elie 3599d9b] Add relevant commands
+ 1 file changed, 19 insertions(+), 1 deletion(-)
+
+medot@LAPTOP-G6CG6M7A MINGW64 ~/Desktop/data-somerset-0806/project (elie)
+$ git push
+fatal: The current branch elie has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin elie
+
+
+medot@LAPTOP-G6CG6M7A MINGW64 ~/Desktop/data-somerset-0806/project (elie)
+$ git push --set-upstream origin elie
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 496 bytes | 248.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+remote:
+remote: Create a pull request for 'elie' on GitHub by visiting:
+remote:      https://github.com/amaddatu/project/pull/new/elie
+remote:
+To https://github.com/amaddatu/project.git
+ * [new branch]      elie -> elie
+Branch 'elie' set up to track remote branch 'elie' from 'origin'.
+
+medot@LAPTOP-G6CG6M7A MINGW64 ~/Desktop/data-somerset-0806/project (elie)
+$ git add ..
+fatal: ..: '..' is outside repository
+
+medot@LAPTOP-G6CG6M7A MINGW64 ~/Desktop/data-somerset-0806/project (elie)
+$ git add .
+
+medot@LAPTOP-G6CG6M7A MINGW64 ~/Desktop/data-somerset-0806/project (elie)
+$ git commit -m "Add note"
+[elie 4598d32] Add note
+ 1 file changed, 3 insertions(+)
+
+medot@LAPTOP-G6CG6M7A MINGW64 ~/Desktop/data-somerset-0806/project (elie)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 390 bytes | 195.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/amaddatu/project.git
+   3599d9b..4598d32  elie -> elie
+
+medot@LAPTOP-G6CG6M7A MINGW64 ~/Desktop/data-somerset-0806/project (elie)
+$
